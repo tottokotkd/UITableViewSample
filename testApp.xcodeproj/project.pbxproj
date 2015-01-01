@@ -13,6 +13,11 @@
 		924058D71A55940C00533FE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924058D61A55940C00533FE8 /* Images.xcassets */; };
 		924058DA1A55940C00533FE8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924058D81A55940C00533FE8 /* LaunchScreen.xib */; };
 		924058E61A55940C00533FE8 /* testAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924058E51A55940C00533FE8 /* testAppTests.swift */; };
+		924058F01A5594A400533FE8 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924058EF1A5594A400533FE8 /* DataSource.swift */; };
+		924058F31A5594BE00533FE8 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924058F21A5594BE00533FE8 /* TableViewDelegate.swift */; };
+		924058F51A5596AF00533FE8 /* tableContents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 924058F41A5596AF00533FE8 /* tableContents.plist */; };
+		924059571A559EE800533FE8 /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924059561A559EE800533FE8 /* Sub.storyboard */; };
+		924059591A559F1F00533FE8 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924059581A559F1F00533FE8 /* SubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		924058DF1A55940C00533FE8 /* testAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924058E41A55940C00533FE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924058E51A55940C00533FE8 /* testAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAppTests.swift; sourceTree = "<group>"; };
+		924058EF1A5594A400533FE8 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		924058F21A5594BE00533FE8 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		924058F41A5596AF00533FE8 /* tableContents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tableContents.plist; sourceTree = "<group>"; };
+		924059561A559EE800533FE8 /* Sub.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
+		924059581A559F1F00533FE8 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				924058CF1A55940C00533FE8 /* AppDelegate.swift */,
-				924058D11A55940C00533FE8 /* ViewController.swift */,
+				924058F11A5594A900533FE8 /* Table view */,
 				924058D31A55940C00533FE8 /* Main.storyboard */,
+				924059561A559EE800533FE8 /* Sub.storyboard */,
 				924058D61A55940C00533FE8 /* Images.xcassets */,
 				924058D81A55940C00533FE8 /* LaunchScreen.xib */,
 				924058CD1A55940C00533FE8 /* Supporting Files */,
@@ -110,6 +121,18 @@
 				924058E41A55940C00533FE8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		924058F11A5594A900533FE8 /* Table view */ = {
+			isa = PBXGroup;
+			children = (
+				924058D11A55940C00533FE8 /* ViewController.swift */,
+				924058EF1A5594A400533FE8 /* DataSource.swift */,
+				924058F21A5594BE00533FE8 /* TableViewDelegate.swift */,
+				924059581A559F1F00533FE8 /* SubViewController.swift */,
+				924058F41A5596AF00533FE8 /* tableContents.plist */,
+			);
+			name = "Table view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +217,9 @@
 			files = (
 				924058D51A55940C00533FE8 /* Main.storyboard in Resources */,
 				924058DA1A55940C00533FE8 /* LaunchScreen.xib in Resources */,
+				924059571A559EE800533FE8 /* Sub.storyboard in Resources */,
 				924058D71A55940C00533FE8 /* Images.xcassets in Resources */,
+				924058F51A5596AF00533FE8 /* tableContents.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924058F31A5594BE00533FE8 /* TableViewDelegate.swift in Sources */,
+				924058F01A5594A400533FE8 /* DataSource.swift in Sources */,
+				924059591A559F1F00533FE8 /* SubViewController.swift in Sources */,
 				924058D21A55940C00533FE8 /* ViewController.swift in Sources */,
 				924058D01A55940C00533FE8 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +435,7 @@
 				924058EB1A55940C00533FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		924058EC1A55940C00533FE8 /* Build configuration list for PBXNativeTarget "testAppTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +444,7 @@
 				924058EE1A55940C00533FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
