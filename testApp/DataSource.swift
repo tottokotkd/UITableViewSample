@@ -26,9 +26,11 @@ class TableContent {
         }
         return contents
     }
-    func makeTableCell(row: Int) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = items[row]
+    
+    func makeTableCell(tableview: UITableView, _ indexPath: NSIndexPath) -> UITableViewCell {
+        let cellID = "tableViewCell"
+        let cell = tableview.dequeueReusableCellWithIdentifier(cellID) as? UITableViewCell ?? UITableViewCell()
+        cell.textLabel?.text = items[indexPath.row]
         return cell
     }
 }
@@ -44,7 +46,7 @@ extension ViewController {
         return contents[section].title
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return contents[indexPath.section].makeTableCell(indexPath.row)
+        return contents[indexPath.section].makeTableCell(tableView, indexPath)
     }
 }
 
